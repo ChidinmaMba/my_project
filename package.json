@@ -1,0 +1,20 @@
+{
+  "name": "two_player_room",
+  "version": "1.0.0",
+  "description": "two player connection fro gaming using socket.io",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server",
+    "dev": "nodemon server.js"
+  },
+  "author": "Chidinma Mba",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http": "^0.0.1-security",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7",
+    "socket.io": "^4.3.2"
+  }
+}
