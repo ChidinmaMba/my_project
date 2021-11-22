@@ -1,5 +1,7 @@
 const users = []; 
 const rooms = [];
+const fullRooms = [];
+const onePlayerRooms = [];
 const{
   uid
 } = require( '../makeIDS/uid');
@@ -56,8 +58,6 @@ function removeFromRoom(socket, user, io){
 	let idx = users.indexOf(user.id);
         let room = user.roomID;
         let roomIdx = rooms.indexOf(room);
-        console.log(idx);
-        users.splice(idx, 1);
         console.log(`user ${user.id}`);
         console.log('Users:', users);
 

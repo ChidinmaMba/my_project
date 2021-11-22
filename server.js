@@ -21,19 +21,17 @@ const {
   joinRoom,
   disconnected
 } = require('./utils/users');
-//const rooms = [];
 
 io.on('connection', (socket) => {
-	console.log(`El nodo con IP: ${socket.handshake.address} se ha conectado...`);
+	//console.log(`Player with IP: ${socket.handshake.address} has connected...`);
         console.log("New Player");
+	
 	var user;
         socket.on('joinRoom', (id) =>{
 		user = joinUsersList(id);
 		joinRoom(socket, user, io);
         });
-	/*if(checkRoom(user.roomId)){
-		console.log("Start Game");
-	}*/
+
 	socket.on('disconnecting', () =>{
 		disconnected(socket, user, io);
 	});
